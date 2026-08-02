@@ -1,7 +1,9 @@
+import { Container } from "@/components/ui/Container";
+
 export default function About() {
   return (
     <section id="about" className="px-6 py-24 sm:px-8 lg:px-10">
-      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.4fr_1fr] lg:items-start">
+      <Container className="grid gap-12 lg:grid-cols-[1.4fr_1fr] lg:items-start">
         <div className="flex flex-col gap-8">
           <div className="inline-flex w-fit items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-[#E8A33D]">
             About Me
@@ -63,15 +65,8 @@ export default function About() {
               <li>Multiple AI & analytics projects</li>
             </ul>
           </div>
-          <div className="sm:col-span-2 flex items-center gap-3 rounded-[24px] border border-white/10 bg-[#E8A33D]/10 p-6 text-sm text-slate-200">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E8A33D" strokeWidth="1.8" aria-hidden="true">
-              <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-              <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-            <span>Pune, India</span>
-          </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

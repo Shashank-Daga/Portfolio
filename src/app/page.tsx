@@ -5,12 +5,10 @@ import About from "@/components/sections/About";
 import Project from "@/components/sections/Project";
 import Skills from "@/components/sections/Skills";
 import Contact from "@/components/sections/Contact";
-// import { PortfolioClient } from "@/components/ui/PortfolioClient";
 
 export default function Home() {
   return (
     <>
-      {/* <PortfolioClient /> */}
       <Nav />
       <main className="flex-1 bg-[#050708]">
         <Hero />

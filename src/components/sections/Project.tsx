@@ -1,7 +1,9 @@
+import { Container } from "@/components/ui/Container";
+
 export default function Project() {
   return (
     <section id="projects" className="px-6 py-24 sm:px-8 lg:px-10">
-      <div className="mx-auto max-w-7xl">
+      <Container>
         <div className="mb-12 flex flex-col gap-3">
           <div className="inline-flex w-fit items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-[#E8A33D]">
             Featured Work
@@ -16,7 +18,7 @@ export default function Project() {
             <div className="text-xs font-semibold uppercase tracking-[0.32em] text-[#E8A33D]">01</div>
             <div className="mt-5 flex items-center justify-between gap-3">
               <div className="text-sm font-medium uppercase tracking-[0.28em] text-slate-400">AI / DATA ANALYTICS PLATFORM</div>
-              <div className="rounded-full border border-[#E8A33D]/30 bg-[#E8A33D]/10 px-3 py-1 text-xs font-semibold text-[#E8A33D]">
+              <div className="rounded-sm border border-[#E8A33D]/30 bg-[#E8A33D]/10 px-3 py-1 text-xs font-semibold text-[#E8A33D]">
                 Featured
               </div>
             </div>
@@ -42,7 +44,7 @@ export default function Project() {
 
             <div className="mt-6 flex flex-wrap gap-2">
               {['Python', 'Pandas', 'NumPy', 'scikit-learn', 'Streamlit', 'SHAP', 'LIME', 'Plotly', 'ReportLab'].map((tag) => (
-                <span key={tag} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-200">
+                <span key={tag} className="rounded-sm border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-200">
                   {tag}
                 </span>
               ))}
@@ -53,7 +55,7 @@ export default function Project() {
             <div className="text-xs font-semibold uppercase tracking-[0.32em] text-[#E8A33D]">02</div>
             <div className="mt-5 flex items-center justify-between gap-3">
               <div className="text-sm font-medium uppercase tracking-[0.28em] text-slate-400">AI SECURITY PLATFORM</div>
-              <div className="rounded-full border border-[#E8A33D]/30 bg-[#E8A33D]/10 px-3 py-1 text-xs font-semibold text-[#E8A33D]">
+              <div className="rounded-sm border border-[#E8A33D]/30 bg-[#E8A33D]/10 px-3 py-1 text-xs font-semibold text-[#E8A33D]">
                 Featured
               </div>
             </div>
@@ -79,7 +81,7 @@ export default function Project() {
 
             <div className="mt-6 flex flex-wrap gap-2">
               {['Python', 'Flask', 'TensorFlow', 'Keras', 'Hugging Face', 'scikit-learn', 'HTML/CSS'].map((tag) => (
-                <span key={tag} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-200">
+                <span key={tag} className="rounded-sm border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-200">
                   {tag}
                 </span>
               ))}
@@ -90,7 +92,7 @@ export default function Project() {
             <div className="text-xs font-semibold uppercase tracking-[0.32em] text-[#E8A33D]">03</div>
             <div className="mt-5 flex items-center justify-between gap-3">
               <div className="text-sm font-medium uppercase tracking-[0.28em] text-slate-400">ENTERPRISE FRAUD DETECTION</div>
-              <div className="rounded-full border border-[#E8A33D]/30 bg-[#E8A33D]/10 px-3 py-1 text-xs font-semibold text-[#E8A33D]">
+              <div className="rounded-sm border border-[#E8A33D]/30 bg-[#E8A33D]/10 px-3 py-1 text-xs font-semibold text-[#E8A33D]">
                 In progress
               </div>
             </div>
@@ -116,14 +118,14 @@ export default function Project() {
 
             <div className="mt-6 flex flex-wrap gap-2">
               {['Java', 'Spring Boot', 'Python', 'MySQL', 'REST APIs', 'Pandas', 'scikit-learn'].map((tag) => (
-                <span key={tag} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-200">
+                <span key={tag} className="rounded-sm border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-200">
                   {tag}
                 </span>
               ))}
             </div>
           </article>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

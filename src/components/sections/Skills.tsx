@@ -1,3 +1,5 @@
+import { Container } from "@/components/ui/Container";
+
 export default function Skills() {
   const progressRings = [
     { label: "Python", pct: 95 },
@@ -27,7 +29,7 @@ export default function Skills() {
 
   return (
     <section id="skills" className="px-6 py-24 sm:px-8 lg:px-10">
-      <div className="mx-auto max-w-7xl">
+      <Container>
         <div className="mb-12 flex flex-col gap-3">
           <div className="inline-flex w-fit items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-[#E8A33D]">
             Capabilities
@@ -81,7 +83,7 @@ export default function Skills() {
                 </div>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {category.items.map((item) => (
-                    <span key={item} className="rounded-full border border-white/10 bg-[#050708]/40 px-3 py-1 text-sm text-slate-200">
+                    <span key={item} className="rounded-sm border border-white/10 bg-[#050708]/40 px-3 py-1 text-sm text-slate-200">
                       {item}
                     </span>
                   ))}
@@ -90,7 +92,7 @@ export default function Skills() {
             ))}
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

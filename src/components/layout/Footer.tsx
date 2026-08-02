@@ -1,10 +1,11 @@
 import Link from "next/link";
+import { Container } from "@/components/ui/Container";
 // import { ArrowUp } from "lucide-react";
 
 export default function Footer() {
   return (
     <footer className="border-t border-white/6 bg-[#0B0E12]">
-      <div className="mx-auto max-w-[1160px] px-7 pt-10">
+      <Container className="pt-10">
         {/* Top */}
         <div className="flex flex-wrap items-center justify-between gap-6 border-b border-white/6 pb-6">
           {/* Left */}
@@ -67,7 +68,7 @@ export default function Footer() {
             <span>Top</span>
           </Link>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }

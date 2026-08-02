@@ -1,14 +1,15 @@
 ﻿import Image from "next/image";
+import { Container } from "@/components/ui/Container";
 
 export default function Hero() {
   return (
     <section id="hero" className="relative overflow-hidden px-6 pt-24 pb-24 sm:px-8 lg:px-10">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[420px] bg-[radial-gradient(circle_at_top,_rgba(232,163,61,0.16),_transparent_35%)] opacity-90" />
       <div className="pointer-events-none absolute -left-20 top-20 h-[280px] w-[280px] rounded-full bg-[#E8A33D]/10 blur-3xl" />
-      <div className="mx-auto flex w-full max-w-[1240px] flex-col gap-16 lg:flex-row lg:items-center">
+      <Container className="flex flex-col gap-16 lg:flex-row lg:items-center">
         <div className="relative z-10 flex-1">
           <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-[#E8A33D] shadow-[0_16px_60px_rgba(232,163,61,0.12)] backdrop-blur-xl">
-            <span className="inline-flex h-2.5 w-2.5 rounded-full bg-[#E8A33D]" />
+            <span className="inline-flex h-2.5 w-2.5 rounded-sm bg-[#E8A33D]" />
             Open to opportunities
           </div>
 
@@ -16,7 +17,7 @@ export default function Hero() {
             <h1 className="text-[4.8rem] leading-[0.92] tracking-[-0.08em] font-extrabold text-[#F8FAFC] sm:text-[5.8rem] lg:text-[6.4rem]">
               Shashank <br /> Daga<span className="text-[#E8A33D]">.</span>
             </h1>
-            <p className="mt-4 inline-flex rounded-full bg-white/5 px-5 py-2 text-sm uppercase tracking-[0.28em] text-[#E8A33D] shadow-[0_16px_55px_rgba(232,163,61,0.12)]">
+            <p className="mt-4 inline-flex rounded-sm bg-white/5 px-5 py-2 text-sm uppercase tracking-[0.28em] text-[#E8A33D] shadow-[0_16px_55px_rgba(232,163,61,0.12)]">
               Backend Developer
             </p>
 
@@ -27,14 +28,14 @@ export default function Hero() {
             <div className="mt-10 flex flex-wrap gap-4">
               <a
                 href="#projects"
-                className="inline-flex items-center justify-center rounded-full bg-[#E8A33D] px-8 py-4 text-sm font-semibold text-[#0B0E12] transition duration-200 hover:-translate-y-0.5 hover:bg-[#ffb347]"
+                className="inline-flex items-center justify-center rounded-sm bg-[#E8A33D] px-8 py-4 text-sm font-semibold text-[#0B0E12] transition duration-200 hover:-translate-y-0.5 hover:bg-[#ffb347]"
               >
                 Explore Work
                 <span className="ml-2">→</span>
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-8 py-4 text-sm font-semibold text-[#F8FAFC] transition duration-200 hover:-translate-y-0.5 hover:border-[#E8A33D] hover:text-[#E8A33D]"
+                className="inline-flex items-center justify-center rounded-sm border border-white/10 bg-white/5 px-8 py-4 text-sm font-semibold text-[#F8FAFC] transition duration-200 hover:-translate-y-0.5 hover:border-[#E8A33D] hover:text-[#E8A33D]"
               >
                 Get In Touch
               </a>
@@ -65,12 +66,13 @@ export default function Hero() {
                 src="/SD.jpg"
                 alt="Shashank Daga portrait"
                 fill
+                priority
                 sizes="(max-width: 768px) 320px, 520px"
                 className="object-cover"
               />
             </div>
 
-            <div className="absolute left-4 top-4 flex items-center gap-3 rounded-full border border-white/10 bg-[#0F141A]/95 px-3 py-2 text-xs text-[#D0DAE9] backdrop-blur-sm">
+            {/* <div className="absolute left-4 top-4 flex items-center gap-3 rounded-full border border-white/10 bg-[#0F141A]/95 px-3 py-2 text-xs text-[#D0DAE9] backdrop-blur-sm">
               <span className="h-2.5 w-2.5 rounded-full bg-[#E8A33D]" />
               8.79 CGPA
             </div>
@@ -88,10 +90,10 @@ export default function Hero() {
             <div className="absolute right-4 bottom-8 flex items-center gap-3 rounded-full border border-white/10 bg-[#0F141A]/95 px-3 py-2 text-xs text-[#D0DAE9] backdrop-blur-sm">
               <span className="inline-flex h-2.5 w-2.5 rounded-full bg-[#E8A33D]" />
               99% Fraud Detection
-            </div>
+            </div> */}
           </div>
         </div>
-      </div>
+      </Container>
 
       {/* <div className="hero-scroll-cue" aria-hidden="true">
         <div className="scroll-mouse">
