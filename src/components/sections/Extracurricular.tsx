@@ -6,7 +6,7 @@ export default function Extracurricular() {
       <Container>
         <div className="mb-12 flex flex-col gap-3">
           <div className="inline-flex w-fit items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-[#E8A33D]">
-            Achievements & Leadership
+            Extracurricular Activities & Awards
           </div>
           <h2 className="text-4xl font-extrabold tracking-[-0.03em] text-[#F8FAFC] sm:text-5xl">
             Beyond the <span className="text-[#E8A33D]">classroom.</span>
