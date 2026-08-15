@@ -2,13 +2,13 @@ import { Container } from "@/components/ui/Container";
 import { Project as ProjectType, projects } from "@/lib/project-data";
 
 const statusStyles: Record<ProjectType["status"], string> = {
-  complete: "border-emerald-500/20 bg-emerald-500/10 text-emerald-300",
-  "in-progress": "border-amber-400/20 bg-amber-400/10 text-amber-300",
+  "in-progress": "border-emerald-500/20 bg-emerald-500/10 text-emerald-300",
+  "complete": "border-amber-400/20 bg-amber-400/10 text-amber-300",
 };
 
 export default function Project() {
   return (
-    <section id="projects" className="px-6 py-24 sm:px-8 lg:px-10">
+    <section id="projects" className="px-6 py-24 sm:px-8 lg:px-10 bg-[#0F1318]">
       <Container className="grid gap-16">
         <div className="flex flex-col gap-3">
           <div className="inline-flex w-fit items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-[#E8A33D]">
@@ -37,7 +37,7 @@ export default function Project() {
                   </div>
                   <h3 className="mt-5 text-2xl font-semibold text-[#F8FAFC]">{project.title}</h3>
                 </div>
-                <span className={`rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] ${statusStyles[project.status]}`}>
+                <span className={`rounded-lg border px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] ${statusStyles[project.status]}`}>
                   {project.statusLabel}
                 </span>
               </div>

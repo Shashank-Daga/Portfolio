@@ -2,7 +2,7 @@ import { Container } from "@/components/ui/Container";
 
 export default function Contact() {
   return (
-    <section id="contact" className="px-6 py-24 sm:px-8 lg:px-10">
+    <section id="contact" className="px-6 py-24 sm:px-8 lg:px-10 bg-[#0F1318]">
 
       <Container>
 

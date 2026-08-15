@@ -7,7 +7,7 @@ import { Container } from "@/components/ui/Container";
 
 export function Education() {
   return (
-    <section id="education" className="px-6 py-24 sm:px-8 lg:px-10">
+    <section id="education" className="px-6 py-24 sm:px-8 lg:px-10 bg-[#0F1318]">
 
       <Container className="grid gap-16">
 

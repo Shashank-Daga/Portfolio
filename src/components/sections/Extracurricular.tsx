@@ -2,7 +2,7 @@ import { Container } from "@/components/ui/Container";
 
 export default function Extracurricular() {
   return (
-    <section id="achievements" className="px-6 py-24 sm:px-8 lg:px-10">
+    <section id="achievements" className="px-6 py-24 sm:px-8 lg:px-10 bg-[#0C0F12]">
       <Container>
         <div className="mb-12 flex flex-col gap-3">
           <div className="inline-flex w-fit items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-[#E8A33D]">

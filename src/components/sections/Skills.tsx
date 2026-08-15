@@ -11,7 +11,7 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="px-6 py-24 sm:px-8 lg:px-10">
+    <section id="skills" className="px-6 py-24 sm:px-8 lg:px-10 bg-[#0C0F12]">
 
       <Container>
 

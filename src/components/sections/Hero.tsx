@@ -3,7 +3,7 @@ import { Container } from "@/components/ui/Container";
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative overflow-hidden px-6 pt-14 pb-24 sm:px-8 lg:px-10">
+    <section id="hero" className="relative overflow-hidden px-6 pt-14 pb-24 sm:px-8 lg:px-10 bg-[#0B0E12]">
 
       {/* <div className="pointer-events-none absolute inset-x-0 top-0 h-[420px] bg-[radial-gradient(circle_at_top,_rgba(232,163,61,0.16),_transparent_35%)] opacity-90" />
       <div className="pointer-events-none absolute -left-20 top-20 h-[280px] w-[280px] rounded-full bg-[#E8A33D]/10 blur-3xl" /> */}

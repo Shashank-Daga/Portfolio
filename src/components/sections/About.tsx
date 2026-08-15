@@ -2,7 +2,7 @@ import { Container } from "@/components/ui/Container";
 
 export default function About() {
   return (
-    <section id="about" className="px-6 py-24 sm:px-8 lg:px-10">
+    <section id="about" className="px-6 py-24 sm:px-8 lg:px-10 bg-[#0B0E12]">
 
       <Container className="grid gap-28 lg:grid-cols-[1.2fr_1.2fr] lg:items-start">
 

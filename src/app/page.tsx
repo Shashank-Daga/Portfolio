@@ -12,13 +12,13 @@ export default function Home() {
   return (
     <>
       <Nav />
-      <main className="flex-1 bg-[#050708]">
+      <main className="flex-1">
         <Hero />
         <About />
         <Project />
         <Skills />
-        <Extracurricular />
         <Education />
+        <Extracurricular />
         <Contact />
       </main>
       <Footer />
