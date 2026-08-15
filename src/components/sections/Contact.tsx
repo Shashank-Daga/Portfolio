@@ -10,12 +10,12 @@ export default function Contact() {
 
           <div className="max-w-2xl space-y-5">
 
-            <div className="text-xs font-semibold uppercase tracking-[0.35em] text-[#E8A33D]">// CONTACT</div>
+            <div className="text-xs font-semibold uppercase tracking-[0.35em] text-[#E8A33D]">CONTACT</div>
             <h2 className="text-4xl font-extrabold tracking-[-0.03em] text-[#F8FAFC] sm:text-5xl">
               Let&apos;s <span className="text-[#E8A33D]">Build Together</span>
             </h2>
             <p className="max-w-xl text-base leading-8 text-slate-300">
-              I&apos;m actively looking for full-time SWE roles and internships. Whether you have a project, an opportunity, or just want to talk tech — my inbox is open.
+              I&apos;m actively looking for full-time IT roles and internships. Whether you have a project, an opportunity, or just want to discuss an idea — my inbox is open.
             </p>
 
           </div>
