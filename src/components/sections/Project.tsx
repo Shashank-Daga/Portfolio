@@ -1,12 +1,37 @@
+"use client";
+
+import { Suspense } from "react";
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { Project as ProjectType, projects } from "@/lib/project-data";
+import { ProjectModal } from "./ProjectModal";
 
-const statusStyles: Record<ProjectType["status"], string> = {
+export const statusStyles: Record<ProjectType["status"], string> = {
   "in-progress": "border-emerald-500/20 bg-emerald-500/10 text-emerald-300",
   "complete": "border-amber-400/20 bg-amber-400/10 text-amber-300",
 };
 
-export default function Project() {
+function ProjectGrid() {
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  const activeSlug = searchParams.get("project");
+  const activeProject = projects.find((p) => p.slug === activeSlug) ?? null;
+
+  const openProject = (slug: string) => {
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("project", slug);
+    router.push(`${pathname}?${params.toString()}#projects`, { scroll: false });
+  };
+
+  const closeProject = () => {
+    const params = new URLSearchParams(searchParams.toString());
+    params.delete("project");
+    const query = params.toString();
+    router.push(`${pathname}${query ? `?${query}` : ""}#projects`, { scroll: false });
+  };
+
   return (
     <section id="projects" className="px-6 py-24 sm:px-8 lg:px-10 bg-[#0F1318]">
       <Container className="grid gap-16">
@@ -43,16 +68,12 @@ export default function Project() {
               </div>
 
               <div className="mt-6 space-y-6 text-sm leading-7 text-slate-300">
-                <p>{project.summary}</p>
                 <div>
                   <span className="font-semibold text-slate-100">Problem —</span> {project.problem}
                 </div>
-                <div>
-                  <span className="font-semibold text-slate-100">Approach —</span> {project.approach}
-                </div>
-                <div>
+                {/* <div>
                   <span className="font-semibold text-slate-100">Impact —</span> {project.impact}
-                </div>
+                </div> */}
               </div>
 
               <div className="mt-8 flex flex-col gap-4">
@@ -60,25 +81,32 @@ export default function Project() {
                   {project.stack.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-200"
+                      className="rounded-[12px] border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-200"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <div>
+                <div className="flex items-center justify-between gap-3">
+                  <button
+                    onClick={() => openProject(project.slug)}
+                    className="inline-flex items-center justify-center rounded-[12px] border border-white/15 bg-white/5 px-5 py-2 text-sm font-semibold text-slate-100 transition hover:border-[#E8A33D]/40 hover:text-[#E8A33D]"
+                  >
+                    View Solution
+                  </button>
+
                   {project.githubUrl ? (
                     <a
                       href={project.githubUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center justify-center rounded-full border border-[#E8A33D]/40 bg-[#E8A33D]/10 px-5 py-2 text-sm font-semibold text-[#E8A33D] transition hover:bg-[#E8A33D]/15"
+                      className="inline-flex items-center justify-center rounded-[12px] border border-[#E8A33D]/40 bg-[#E8A33D]/10 px-5 py-2 text-sm font-semibold text-[#E8A33D] transition hover:bg-[#E8A33D]/15"
                     >
                       View Code
                     </a>
                   ) : (
-                    <span className="inline-flex items-center justify-center rounded-full border border-slate-700/80 bg-slate-950/20 px-5 py-2 text-sm text-slate-400">
+                    <span className="inline-flex items-center justify-center rounded-[12px] border border-slate-700/80 bg-slate-950/20 px-5 py-2 text-sm text-slate-400">
                       Code available on request
                     </span>
                   )}
@@ -88,6 +116,17 @@ export default function Project() {
           ))}
         </div>
       </Container>
+
+      <ProjectModal project={activeProject} onClose={closeProject} />
     </section>
+  );
+}
+
+export default function Project() {
+  // useSearchParams requires a Suspense boundary in the App Router
+  return (
+    <Suspense fallback={null}>
+      <ProjectGrid />
+    </Suspense>
   );
 }

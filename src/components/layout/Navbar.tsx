@@ -48,12 +48,12 @@ export function Nav() {
   }, []);
 
   return (
-    <header id="site-header" className="sticky top-0 z-40 w-full bg-[#0B0E12]/90 backdrop-blur-xl">
+    <header id="site-header" className="sticky top-0 z-40 w-full bg-[#0B0E12] backdrop-blur-xl">
 
       <Container className="flex items-center justify-between gap-6 py-4">
 
         <a href="#hero" className="inline-flex items-center gap-3" aria-label="Go to top">
-          <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#E8A33D] text-sm font-black tracking-[0.08em] text-[#050708]">
+          <div className="flex h-[38px] w-[38px] items-center justify-center rounded-lg bg-[#E8A33D] text-sm font-black tracking-[0.08em] text-[#050708]">
             SD
           </div>
           <div className="flex flex-col">
