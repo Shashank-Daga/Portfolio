@@ -18,6 +18,7 @@ export default function Skills() {
         <div className="mb-12">
 
           <div className="inline-flex w-fit items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-[#E8A33D]">
+            <span className="h-px w-8 bg-[#E8A33D]" />
             Skills
           </div>
           <h2 className="mt-4 text-4xl font-extrabold tracking-[-0.03em] text-[#F8FAFC] sm:text-5xl">Tech Stack</h2>

@@ -52,6 +52,7 @@ export function Nav() {
 
       <Container className="flex items-center justify-between gap-6 py-4">
 
+        {/* #TODO: Logo Change*/}
         <a href="#hero" className="inline-flex items-center gap-3" aria-label="Go to top">
           <div className="flex h-[38px] w-[38px] items-center justify-center rounded-lg bg-[#E8A33D] text-sm font-black tracking-[0.08em] text-[#050708]">
             SD
@@ -70,9 +71,10 @@ export function Nav() {
                   href={link.href}
                   data-nav={link.dataNav}
                   aria-current={activeSection === link.dataNav ? "true" : undefined}
-                  className={`text-sm transition hover:text-[#E8A33D] ${
-                    activeSection === link.dataNav ? "text-[#E8A33D]" : "text-slate-200"
-                  }`}
+                  className={`rounded-md px-3.5 py-1.5 text-sm font-medium transition-colors duration-200 ${activeSection === link.dataNav
+                      ? "bg-[#E8A33D] text-[#E8A33D]"
+                      : "text-slate-400 hover:bg-white/5 hover:text-[#F8FAFC]"
+                    }`}
                 >
                   {link.label}
                 </a>
@@ -101,19 +103,16 @@ export function Nav() {
         >
           <div className="flex h-5 w-5 flex-col justify-center gap-[5px]">
             <span
-              className={`block h-0.5 w-full rounded-full bg-current transition-transform duration-200 ${
-                isOpen ? "translate-y-[7px] rotate-45" : ""
-              }`}
+              className={`block h-0.5 w-full rounded-full bg-current transition-transform duration-200 ${isOpen ? "translate-y-[7px] rotate-45" : ""
+                }`}
             />
             <span
-              className={`block h-0.5 w-full rounded-full bg-current transition-opacity duration-200 ${
-                isOpen ? "opacity-0" : "opacity-100"
-              }`}
+              className={`block h-0.5 w-full rounded-full bg-current transition-opacity duration-200 ${isOpen ? "opacity-0" : "opacity-100"
+                }`}
             />
             <span
-              className={`block h-0.5 w-full rounded-full bg-current transition-transform duration-200 ${
-                isOpen ? "-translate-y-[7px] -rotate-45" : ""
-              }`}
+              className={`block h-0.5 w-full rounded-full bg-current transition-transform duration-200 ${isOpen ? "-translate-y-[7px] -rotate-45" : ""
+                }`}
             />
           </div>
         </button>
@@ -132,9 +131,8 @@ export function Nav() {
                 href={link.href}
                 data-nav={link.dataNav}
                 aria-current={activeSection === link.dataNav ? "true" : undefined}
-                className={`block text-sm transition hover:text-[#E8A33D] ${
-                  activeSection === link.dataNav ? "text-[#E8A33D]" : "text-slate-200"
-                }`}
+                className={`block text-sm transition hover:text-[#E8A33D] ${activeSection === link.dataNav ? "text-[#E8A33D]" : "text-slate-200"
+                  }`}
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}

@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Shashank Daga — Data Engineer & Full Stack Developer",
+  title: "Shashank Daga Portfolio",
   description:
-    "Portfolio of Shashank Daga — Data Engineer, Backend Developer & Full Stack Developer building scalable, intelligent software systems from Pune, India.",
+    "Portfolio of Shashank Daga — building scalable, intelligent software systems.",
 };
 
 export default function RootLayout({

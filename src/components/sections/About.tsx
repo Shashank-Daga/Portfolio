@@ -9,6 +9,7 @@ export default function About() {
         <div className="flex flex-col gap-8">
 
           <div className="inline-flex w-fit items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-[#E8A33D]">
+            <span className="h-px w-8 bg-[#E8A33D]" />
             About Me
           </div>
 

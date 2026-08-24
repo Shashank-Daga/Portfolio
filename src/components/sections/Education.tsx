@@ -14,6 +14,7 @@ export function Education() {
         <div className="flex flex-col gap-3">
 
           <div className="inline-flex w-fit items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-[#E8A33D]">
+            <span className="h-px w-8 bg-[#E8A33D]" />
             Education
           </div>
           <h2 className="text-4xl font-extrabold tracking-[-0.03em] text-[#F8FAFC] sm:text-5xl">

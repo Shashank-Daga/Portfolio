@@ -41,6 +41,10 @@ export default function Hero() {
                   AI/ML Enthusiast
                 </span>
 
+                {/* <span className="h-8 leading-8 text-base font-medium text-[#E8A33D]">
+                  System Design
+                </span> */}
+
                 {/* Duplicate first item for smooth looping */}
                 <span className="h-8 leading-8 text-base font-medium text-[#E8A33D]">
                   Data Engineer
@@ -95,7 +99,7 @@ export default function Hero() {
 
             <div className="relative h-full w-full overflow-hidden rounded-full bg-[#0B0E12]">
               <Image
-                src="/SD.jpg"
+                src="/6.4.png"
                 alt="Shashank Daga portrait"
                 fill
                 priority
