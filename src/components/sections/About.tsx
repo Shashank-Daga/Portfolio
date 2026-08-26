@@ -14,17 +14,17 @@ export default function About() {
           </div>
 
           <h2 className="max-w-3xl text-4xl font-bold leading-[0.95] tracking-[-0.03em] text-[#F8FAFC] sm:text-5xl lg:text-[3.8rem]">
-            Turning data
+            Building ideas
             <br />
-            into <span className="text-[#E8A33D]">decisions.</span>
+            into <span className="text-[#E8A33D]">reality</span>
           </h2>
 
           <div className="grid max-w-3xl gap-4 text-base leading-8 text-slate-300">
             <p>
-              I recently completed my B.Tech in Information Technology from <strong>Vishwakarma Institute of Technology, Pune</strong> with a CGPA of <strong className="text-[#E8A33D]">8.79</strong>. I have a strong foundation across data engineering, backend development, machine learning, and software architecture.
+              I recently completed my B.Tech in Information Technology from <strong>Vishwakarma Institute of Technology, Pune</strong> with a CGPA of <strong className="text-[#E8A33D]">8.79</strong>. My foundation spans software engineering, backend development, data systems, machine learning, and system architecture — allowing me to approach problems from both a technical and product perspective.
             </p>
             <p>
-              I enjoy the full lifecycle — from designing REST APIs and microservices to building AI-powered analytics systems. I write maintainable code, build production-ready systems, and embrace continuous learning.
+              I enjoy the full lifecycle — from designing APIs and backend services to building intelligent applications and scalable systems. I focus on writing maintainable code, solving problems thoughtfully, and turning ideas into reliable software.
             </p>
           </div>
 
@@ -36,13 +36,14 @@ export default function About() {
           <div className="rounded-[24px] border border-white/10 bg-white/5 p-6">
             <div className="text-4xl font-semibold text-[#E8A33D] sm:text-5xl">8.79</div>
             <div className="mt-2 text-sm font-semibold uppercase tracking-[0.25em] text-[#F8FAFC]">CGPA</div>
-            <div className="mt-1 text-sm text-slate-400">VIT Pune · IT</div>
+            <div className="mt-1 text-sm text-slate-400">B.Tech · IT</div>
+            <div className="mt-1 text-sm text-slate-400">VIT Pune</div>
           </div>
 
           <div className="rounded-[24px] border border-white/10 bg-white/5 p-6">
-            <div className="text-4xl font-semibold text-[#E8A33D] sm:text-5xl">3</div>
-            <div className="mt-2 text-sm font-semibold uppercase tracking-[0.25em] text-[#F8FAFC]">Projects</div>
-            <div className="mt-1 text-sm text-slate-400">AI · Data · Backend</div>
+            <div className="text-4xl font-semibold text-[#E8A33D] sm:text-5xl">4</div>
+            <div className="mt-2 text-sm font-semibold uppercase tracking-[0.25em] text-[#F8FAFC]">Featured Projects</div>
+            <div className="mt-1 text-sm text-slate-400">Backend · Data · AI</div>
           </div>
 
           {/* <div className="rounded-[24px] border border-white/10 bg-white/5 p-6 sm:col-start-1 sm:row-start-2">
@@ -57,7 +58,7 @@ export default function About() {
             <div className="mt-2 text-sm text-slate-400">Nov 2022 – June 2026</div>
             <ul className="mt-4 space-y-2 text-sm leading-7 text-slate-300">
               <li>Databases, DSA, Software Engineering, ML</li>
-              <li>Multiple AI & analytics projects</li>
+              <li>Projects across software, data & AI</li>
             </ul>
           </div>
 
@@ -68,4 +69,3 @@ export default function About() {
     </section>
   );
 }
-

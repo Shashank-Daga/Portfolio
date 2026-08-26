@@ -47,7 +47,7 @@ export default function Extracurricular() {
       className="relative overflow-hidden bg-[#0C0F12] px-6 py-24 sm:px-8 lg:px-10"
     >
       {/* Subtle background glow */}
-      <div className="pointer-events-none absolute left-1/2 top-0 h-72 w-72 -translate-x-1/2 rounded-full bg-[#E8A33D]/5 blur-3xl" />
+      {/* <div className="pointer-events-none absolute left-1/2 top-0 h-72 w-72 -translate-x-1/2 rounded-full bg-[#E8A33D]/5 blur-3xl" /> */}
 
       <Container>
         {/* Header */}
@@ -59,7 +59,7 @@ export default function Extracurricular() {
 
           <h2 className="text-4xl font-extrabold tracking-[-0.04em] text-[#F8FAFC] sm:text-5xl lg:text-6xl">
             Leadership &{" "}
-            <span className="text-[#E8A33D]">recognition.</span>
+            <span className="text-[#E8A33D]">recognition</span>
           </h2>
 
           <p className="mt-5 max-w-2xl text-base leading-7 text-slate-400">

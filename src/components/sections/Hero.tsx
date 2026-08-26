@@ -26,11 +26,11 @@ export default function Hero() {
 
               <div className="flex flex-col animate-role-slider">
                 <span className="h-8 leading-8 text-base font-medium text-[#E8A33D]">
-                  Data Engineer
+                  Backend Developer
                 </span>
 
                 <span className="h-8 leading-8 text-base font-medium text-[#E8A33D]">
-                  Backend Developer
+                  Data Engineer
                 </span>
 
                 <span className="h-8 leading-8 text-base font-medium text-[#E8A33D]">
@@ -47,14 +47,19 @@ export default function Hero() {
 
                 {/* Duplicate first item for smooth looping */}
                 <span className="h-8 leading-8 text-base font-medium text-[#E8A33D]">
-                  Data Engineer
+                  Backend Developer
                 </span>
               </div>
-              
+
             </div>
 
             <p className="mt-5 text-[1.03rem] leading-[1.9] text-[#CAD4E6] sm:text-base">
-              I build <span className="font-semibold text-[#F8FAFC]">scalable data-driven applications</span> and intelligent software systems — turning complex data into actionable, production-ready solutions with measurable impact.
+              I build{" "}
+              <span className="font-semibold text-[#F8FAFC]">
+                scalable software and intelligent solutions
+              </span>{" "}
+              — transforming complex problems into reliable, production-ready products
+              that create measurable impact.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">

@@ -46,7 +46,7 @@ function ProjectGrid() {
 
           <div className="max-w-3xl">
             <h2 className="text-4xl font-extrabold tracking-[-0.03em] text-[#F8FAFC] sm:text-5xl">
-              Projects that <span className="text-[#E8A33D]">ship.</span>
+              From problems to <span className="text-[#E8A33D]">production</span>
             </h2>
             <p className="mt-5 text-base leading-8 text-slate-300">
               Systems I&apos;ve designed and built, from research-stage models to production-shaped backend pipelines.

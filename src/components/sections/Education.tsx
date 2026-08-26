@@ -18,7 +18,7 @@ export function Education() {
             Education
           </div>
           <h2 className="text-4xl font-extrabold tracking-[-0.03em] text-[#F8FAFC] sm:text-5xl">
-            Academic journey.
+            Academic <span className="text-[#E8A33D]">journey</span>
           </h2>
 
         </div>
