@@ -61,7 +61,7 @@ export const projects: Project[] = [
       "Hugging Face Transformers",
       "scikit-learn",
     ],
-    // githubUrl intentionally omitted — link pending
+    githubUrl: "https://github.com/Shashank-Daga/FraudShield-AI-Driven-Real-Time-Scam-Detection-and-Prevention.git",
   },
   {
     slug: "ai-crm",

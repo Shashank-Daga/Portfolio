@@ -114,7 +114,7 @@ function ProjectGrid() {
                       rel="noreferrer"
                       className="inline-flex items-center justify-center rounded-[12px] border border-[#E8A33D]/40 bg-[#E8A33D]/10 px-5 py-2 text-sm font-semibold text-[#E8A33D] transition hover:bg-[#E8A33D]/15"
                     >
-                      View Code
+                      GitHub
                     </a>
                   ) : (
                     <span className="inline-flex items-center justify-center rounded-[12px] border border-slate-700/80 bg-slate-950/20 px-5 py-2 text-sm text-slate-400">

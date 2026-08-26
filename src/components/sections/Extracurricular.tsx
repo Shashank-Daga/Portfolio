@@ -30,14 +30,14 @@ const awards = [
       "Recognized for coordinating college events while serving as Database Secretary.",
     icon: "✦",
   },
-  {
-    year: "2020",
-    title: "Best Student Award",
-    organization: "Academic Excellence",
-    description:
-      "Awarded for excellence in academics and extracurricular activities.",
-    icon: "★",
-  },
+  // {
+  //   year: "2020",
+  //   title: "Best Student Award",
+  //   organization: "Academic Excellence",
+  //   description:
+  //     "Awarded for excellence in academics and extracurricular activities.",
+  //   icon: "★",
+  // },
 ];
 
 export default function Extracurricular() {
