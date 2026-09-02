@@ -7,7 +7,7 @@ const LINKS = [
   { label: "About", href: "#about", dataNav: "about" },
   { label: "Projects", href: "#projects", dataNav: "projects" },
   { label: "Skills", href: "#skills", dataNav: "skills" },
-  { label: "Awards", href: "#achievements", dataNav: "achievements" },
+  // { label: "Awards", href: "#achievements", dataNav: "achievements" },
   { label: "Contact", href: "#contact", dataNav: "contact" },
 ];
 
@@ -72,7 +72,7 @@ export function Nav() {
                   data-nav={link.dataNav}
                   aria-current={activeSection === link.dataNav ? "true" : undefined}
                   className={`rounded-md px-3.5 py-1.5 text-sm font-medium transition-colors duration-200 ${activeSection === link.dataNav
-                      ? "bg-[#E8A33D] text-[#E8A33D]"
+                      ? "bg-[#E8A33D] text-[#0B0E12]"
                       : "text-slate-400 hover:bg-white/5 hover:text-[#F8FAFC]"
                     }`}
                 >

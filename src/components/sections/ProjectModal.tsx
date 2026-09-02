@@ -1,8 +1,7 @@
 "use client";
 
 import { Modal } from "@/components/ui/Modal";
-import { Project as ProjectType } from "@/lib/project-data";
-import { statusStyles } from "./Project";
+import { Project as ProjectType, statusStyles } from "@/lib/project-data";
 
 interface ProjectModalProps {
   project: ProjectType | null;

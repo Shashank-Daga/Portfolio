@@ -44,7 +44,8 @@ export default function Extracurricular() {
   return (
     <section
       id="achievements"
-      className="relative overflow-hidden bg-[#0C0F12] px-6 py-24 sm:px-8 lg:px-10"
+      className="relative overflow-hidden bg-[#0F1318] px-6 py-24 sm:px-8 lg:px-10"
+      // className="relative overflow-hidden bg-[#0C0F12] px-6 py-24 sm:px-8 lg:px-10"
     >
       {/* Subtle background glow */}
       {/* <div className="pointer-events-none absolute left-1/2 top-0 h-72 w-72 -translate-x-1/2 rounded-full bg-[#E8A33D]/5 blur-3xl" /> */}

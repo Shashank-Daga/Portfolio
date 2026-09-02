@@ -2,7 +2,7 @@
 
 :root {
   color-scheme: dark;
-  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
   background-color: #050708;
   color: #edf1f7;
 }

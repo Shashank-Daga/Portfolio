@@ -23,7 +23,7 @@ export default function Skills() {
           </div>
           <h2 className="mt-4 text-4xl font-extrabold tracking-[-0.03em] text-[#F8FAFC] sm:text-5xl">Tech <span className="text-[#E8A33D]">Stack</span></h2>
           <p className="mt-4 max-w-2xl text-lg text-slate-400">
-            The languages, frameworks, and tools I reach for when turning data into something usable.
+            The languages, frameworks, and tools I use to build reliable software and solve complex problems.
           </p>
 
         </div>

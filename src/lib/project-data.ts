@@ -14,6 +14,11 @@ export interface Project {
   images?: string[]; // omitted -> no screenshots section in modal
 }
 
+export const statusStyles: Record<Project["status"], string> = {
+  "in-progress": "border-emerald-500/20 bg-emerald-500/10 text-emerald-300",
+  "complete": "border-amber-400/20 bg-amber-400/10 text-amber-300",
+};
+
 export const projects: Project[] = [
   {
     slug: "dataprepx",
@@ -38,7 +43,7 @@ export const projects: Project[] = [
       "LIME",
       "ReportLab",
     ],
-    githubUrl: "https://github.com/Shashank-Daga/DataPerpX",
+    githubUrl: "https://github.com/Shashank-Daga/DataPerpX.git",
   },
   {
     slug: "fraudshield",
@@ -80,7 +85,7 @@ export const projects: Project[] = [
     // githubUrl intentionally omitted — link pending
   },
   {
-    slug: "Finsentinel",
+    slug: "finsentinel",
     title: "FinSentinel",
     status: "in-progress",
     statusLabel: "In Progress",
@@ -93,6 +98,6 @@ export const projects: Project[] = [
     impact:
       "Core transaction pipeline (Rule Engine → Risk Scoring → Decision Engine) is functional end-to-end in Java, with the ML anomaly layer next in the roadmap.",
     stack: ["Java", "Spring Boot", "MySQL", "Python", "REST APIs"],
-    githubUrl: "https://github.com/Shashank-Daga/FinSentinel",
+    githubUrl: "https://github.com/Shashank-Daga/FinSentinel.git",
   },
 ];

@@ -5,7 +5,7 @@ import { CursorGlow } from "@/components/effects/CursorGlow";
 
 const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-geist-sans",
+  variable: "--font-sans",
 });
 
 const geistMono = Geist_Mono({

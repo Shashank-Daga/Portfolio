@@ -36,8 +36,8 @@ export default function About() {
           <div className="rounded-[24px] border border-white/10 bg-white/5 p-6">
             <div className="text-4xl font-semibold text-[#E8A33D] sm:text-5xl">8.79</div>
             <div className="mt-2 text-sm font-semibold uppercase tracking-[0.25em] text-[#F8FAFC]">CGPA</div>
-            <div className="mt-1 text-sm text-slate-400">B.Tech · IT</div>
-            <div className="mt-1 text-sm text-slate-400">VIT Pune</div>
+            <div className="mt-1 text-sm text-slate-400">Information Technology</div>
+            {/* <div className="mt-1 text-sm text-slate-400">VIT, Pune</div> */}
           </div>
 
           <div className="rounded-[24px] border border-white/10 bg-white/5 p-6">
@@ -53,7 +53,7 @@ export default function About() {
           </div> */}
 
           <div className="rounded-[24px] border border-white/10 bg-white/5 p-6 sm:col-span-2 sm:row-start-2">
-            <div className="text-sm font-semibold uppercase tracking-[0.25em] text-[#E8A33D]">B.Tech · IT</div>
+            <div className="text-sm font-semibold uppercase tracking-[0.25em] text-[#E8A33D]">B.Tech</div>
             <div className="mt-3 text-base font-semibold text-[#F8FAFC]">Vishwakarma Institute of Technology</div>
             <div className="mt-2 text-sm text-slate-400">Nov 2022 – June 2026</div>
             <ul className="mt-4 space-y-2 text-sm leading-7 text-slate-300">

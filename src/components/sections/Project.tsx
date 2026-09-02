@@ -3,13 +3,8 @@
 import { Suspense } from "react";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { Container } from "@/components/ui/Container";
-import { Project as ProjectType, projects } from "@/lib/project-data";
+import { projects, statusStyles } from "@/lib/project-data";
 import { ProjectModal } from "./ProjectModal";
-
-export const statusStyles: Record<ProjectType["status"], string> = {
-  "in-progress": "border-emerald-500/20 bg-emerald-500/10 text-emerald-300",
-  "complete": "border-amber-400/20 bg-amber-400/10 text-amber-300",
-};
 
 function ProjectGrid() {
   const router = useRouter();
@@ -49,7 +44,7 @@ function ProjectGrid() {
               From problems to <span className="text-[#E8A33D]">production</span>
             </h2>
             <p className="mt-5 text-base leading-8 text-slate-300">
-              Systems I&apos;ve designed and built, from research-stage models to production-shaped backend pipelines.
+              A selection of systems I&apos;ve designed and built to solve real-world problems.
             </p>
           </div>
 

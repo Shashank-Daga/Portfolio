@@ -21,8 +21,7 @@ export default function Footer() {
             </div>
 
             <p className="max-w-[360px] text-[14px] italic leading-[1.5] text-[#4E5A6B]">
-              "Engineering scalable software, transforming data into intelligent
-              solutions."
+              "Engineering scalable software, transforming ideas into reliable products."
             </p>
           </div>
 

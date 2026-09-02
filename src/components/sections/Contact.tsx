@@ -2,7 +2,8 @@ import { Container } from "@/components/ui/Container";
 
 export default function Contact() {
   return (
-    <section id="contact" className="px-6 py-24 sm:px-8 lg:px-10 bg-[#0F1318]">
+    <section id="contact" className="px-6 py-24 sm:px-8 lg:px-10 bg-[#0C0F12]">
+    {/* <section id="contact" className="px-6 py-24 sm:px-8 lg:px-10 bg-[#0F1318]"> */}
 
       <Container>
 
@@ -19,7 +20,7 @@ export default function Contact() {
               Let&apos;s <span className="text-[#E8A33D]">Build Together</span>
             </h2>
             <p className="max-w-xl text-base leading-8 text-slate-300">
-              I&apos;m actively looking for full-time IT roles and internships. Whether you have a project, an opportunity, or just want to discuss an idea — my inbox is open.
+              I&apos;m open to full-time opportunities, internships, and freelance projects in software engineering. Whether you're hiring, looking for someone to build your next project, or simply want to discuss an idea — my inbox is open.
             </p>
 
           </div>
