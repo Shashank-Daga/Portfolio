@@ -17,32 +17,57 @@ export function Nav() {
   const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
-    const sectionIds = ["hero", ...LINKS.map((link) => link.dataNav)];
-    const sections = sectionIds
-      .map((id) => document.getElementById(id))
-      .filter((el): el is HTMLElement => el !== null);
+    // Use a small retry mechanism to wait for all sections to be in the DOM,
+    // especially for sections inside Suspense boundaries with late-loading content
+    const getSections = () => {
+      const sectionIds = ["hero", ...LINKS.map((link) => link.dataNav)];
+      return sectionIds
+        .map((id) => document.getElementById(id))
+        .filter((el): el is HTMLElement => el !== null);
+    };
 
-    if (sections.length === 0) return;
+    let sections = getSections();
+    let retries = 0;
+    const maxRetries = 10;
 
-    observerRef.current = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-
-        if (visible.length > 0) {
-          setActiveSection(visible[0].target.id);
-        }
-      },
-      {
-        rootMargin: "-20% 0px -60% 0px",
-        threshold: [0, 0.25, 0.5, 0.75, 1],
+    // If we didn't find all sections, retry after a brief delay
+    // This handles Suspense boundaries and other late-mounting content
+    const retryTimer = setInterval(() => {
+      if (sections.length < LINKS.length + 1 && retries < maxRetries) {
+        sections = getSections();
+        retries++;
+      } else {
+        clearInterval(retryTimer);
       }
-    );
+    }, 50);
 
-    sections.forEach((section) => observerRef.current?.observe(section));
+    // Also set up the observer immediately with whatever sections we found
+    const setupObserver = () => {
+      if (sections.length === 0) return;
+
+      observerRef.current = new IntersectionObserver(
+        (entries) => {
+          const visible = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+          if (visible.length > 0) {
+            setActiveSection(visible[0].target.id);
+          }
+        },
+        {
+          rootMargin: "-20% 0px -60% 0px",
+          threshold: [0, 0.25, 0.5, 0.75, 1],
+        }
+      );
+
+      sections.forEach((section) => observerRef.current?.observe(section));
+    };
+
+    setupObserver();
 
     return () => {
+      clearInterval(retryTimer);
       observerRef.current?.disconnect();
     };
   }, []);
