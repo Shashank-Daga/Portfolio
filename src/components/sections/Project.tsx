@@ -133,7 +133,7 @@ function ProjectGrid() {
 export default function Project() {
   // useSearchParams requires a Suspense boundary in the App Router
   return (
-    <Suspense fallback={null}>
+    <Suspense fallback={<section id="projects" className="px-6 py-24 sm:px-8 lg:px-10 bg-[#0F1318]" />}>
       <ProjectGrid />
     </Suspense>
   );
