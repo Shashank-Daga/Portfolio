@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Container } from "@/components/ui/Container";
 
 const LINKS = [
@@ -14,62 +14,31 @@ const LINKS = [
 export function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("hero");
-  const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
-    // Use a small retry mechanism to wait for all sections to be in the DOM,
-    // especially for sections inside Suspense boundaries with late-loading content
-    const getSections = () => {
-      const sectionIds = ["hero", ...LINKS.map((link) => link.dataNav)];
-      return sectionIds
-        .map((id) => document.getElementById(id))
-        .filter((el): el is HTMLElement => el !== null);
-    };
+    const sectionIds = ["hero", ...LINKS.map((link) => link.dataNav)];
 
-    let sections = getSections();
-    let retries = 0;
-    const maxRetries = 10;
+    const getActiveSection = () => {
+      const scrollY = window.scrollY;
+      const viewportHeight = window.innerHeight;
+      // Trigger point: 30% from the top of the viewport
+      const triggerPoint = scrollY + viewportHeight * 0.3;
 
-    // If we didn't find all sections, retry after a brief delay
-    // This handles Suspense boundaries and other late-mounting content
-    const retryTimer = setInterval(() => {
-      if (sections.length < LINKS.length + 1 && retries < maxRetries) {
-        sections = getSections();
-        retries++;
-      } else {
-        clearInterval(retryTimer);
-      }
-    }, 50);
-
-    // Also set up the observer immediately with whatever sections we found
-    const setupObserver = () => {
-      if (sections.length === 0) return;
-
-      observerRef.current = new IntersectionObserver(
-        (entries) => {
-          const visible = entries
-            .filter((entry) => entry.isIntersecting)
-            .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-
-          if (visible.length > 0) {
-            setActiveSection(visible[0].target.id);
-          }
-        },
-        {
-          rootMargin: "-20% 0px -60% 0px",
-          threshold: [0, 0.25, 0.5, 0.75, 1],
+      let current = sectionIds[0];
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (el && el.offsetTop <= triggerPoint) {
+          current = id;
         }
-      );
-
-      sections.forEach((section) => observerRef.current?.observe(section));
+      }
+      setActiveSection(current);
     };
 
-    setupObserver();
+    // Run once on mount to set the correct initial state
+    getActiveSection();
 
-    return () => {
-      clearInterval(retryTimer);
-      observerRef.current?.disconnect();
-    };
+    window.addEventListener("scroll", getActiveSection, { passive: true });
+    return () => window.removeEventListener("scroll", getActiveSection);
   }, []);
 
   return (
