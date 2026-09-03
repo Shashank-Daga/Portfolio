@@ -16,22 +16,31 @@ export function Nav() {
   const [activeSection, setActiveSection] = useState<string>("hero");
 
   useEffect(() => {
-    const sectionIds = ["hero", ...LINKS.map((link) => link.dataNav)];
+    // Only the sections that are actually linked in the navbar (+ hero)
+    const navSectionIds = ["hero", ...LINKS.map((link) => link.dataNav)];
 
     const getActiveSection = () => {
       const scrollY = window.scrollY;
       const viewportHeight = window.innerHeight;
-      // Trigger point: 30% from the top of the viewport
+      // Trigger point: 30% down from the top of the viewport
       const triggerPoint = scrollY + viewportHeight * 0.3;
 
-      let current = sectionIds[0];
-      for (const id of sectionIds) {
+      // Find which nav-linked section the trigger point sits inside.
+      // If the user is in an unlisted section (e.g. Extracurricular),
+      // no section will match and activeSection becomes "" → nothing highlighted.
+      let matched = "";
+      for (const id of navSectionIds) {
         const el = document.getElementById(id);
-        if (el && el.offsetTop <= triggerPoint) {
-          current = id;
+        if (el) {
+          const top = el.offsetTop;
+          const bottom = top + el.offsetHeight;
+          if (triggerPoint >= top && triggerPoint < bottom) {
+            matched = id;
+            break;
+          }
         }
       }
-      setActiveSection(current);
+      setActiveSection(matched);
     };
 
     // Run once on mount to set the correct initial state
