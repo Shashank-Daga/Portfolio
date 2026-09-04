@@ -5,7 +5,7 @@ export default function Skills() {
   const rows = [
     { label: "Languages", items: skills.languages },
     { label: "Data & ML", items: skills.dataAndMl },
-    { label: "Backend", items: skills.backend },
+    { label: "Backend & Databases", items: skills.backendAndDatabases },
     { label: "Visualization", items: skills.visualization },
     { label: "Tools", items: skills.tools },
   ];

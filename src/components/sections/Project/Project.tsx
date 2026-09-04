@@ -1,32 +1,13 @@
-"use client";
+// Server Component — no "use client", renders fully on the server with zero JS.
+// The "View Details" links use plain ?project=slug hrefs so they degrade
+// gracefully when JS is disabled. ProjectInteractions handles the modal when
+// JS is available.
 
-import { Suspense } from "react";
-import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { projects, statusStyles } from "@/lib/project-data";
-import { ProjectModal } from "./ProjectModal";
+import { ProjectInteractions } from "./ProjectInteractions";
 
-function ProjectGrid() {
-  const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-
-  const activeSlug = searchParams.get("project");
-  const activeProject = projects.find((p) => p.slug === activeSlug) ?? null;
-
-  const openProject = (slug: string) => {
-    const params = new URLSearchParams(searchParams.toString());
-    params.set("project", slug);
-    router.push(`${pathname}?${params.toString()}#projects`, { scroll: false });
-  };
-
-  const closeProject = () => {
-    const params = new URLSearchParams(searchParams.toString());
-    params.delete("project");
-    const query = params.toString();
-    router.push(`${pathname}${query ? `?${query}` : ""}#projects`, { scroll: false });
-  };
-
+export default function Project() {
   return (
     <section id="projects" className="px-6 py-24 sm:px-8 lg:px-10 bg-[#0F1318]">
 
@@ -95,12 +76,13 @@ function ProjectGrid() {
                 </div>
 
                 <div className="flex items-center justify-between gap-3">
-                  <button
-                    onClick={() => openProject(project.slug)}
+                  {/* Plain <a> link — works without JS; modal picks it up when JS is on */}
+                  <a
+                    href={`?project=${project.slug}#projects`}
                     className="inline-flex items-center justify-center rounded-[12px] border border-white/15 bg-white/5 px-5 py-2 text-sm font-semibold text-slate-100 transition hover:border-[#E8A33D]/40 hover:text-[#E8A33D]"
                   >
                     View Details
-                  </button>
+                  </a>
 
                   {project.githubUrl ? (
                     <a
@@ -122,19 +104,11 @@ function ProjectGrid() {
             </article>
           ))}
         </div>
-        
+
       </Container>
 
-      <ProjectModal project={activeProject} onClose={closeProject} />
+      {/* Client-only: modal + URL-based state. Nothing renders here without JS. */}
+      <ProjectInteractions />
     </section>
-  );
-}
-
-export default function Project() {
-  // useSearchParams requires a Suspense boundary in the App Router
-  return (
-    <Suspense fallback={null}>
-      <ProjectGrid />
-    </Suspense>
   );
 }
