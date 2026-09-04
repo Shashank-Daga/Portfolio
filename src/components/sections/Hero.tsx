@@ -18,7 +18,7 @@ export default function Hero() {
           </div>
 
           <div className="mt-8 max-w-[720px]">
-            <h1 className="text-[4.8rem] leading-[0.92] tracking-[-0.08em] font-bold text-[#F8FAFC] sm:text-[5.8rem] lg:text-[5.0rem]">
+            <h1 className="text-5xl leading-[0.92] tracking-[-0.08em] font-bold text-[#F8FAFC] sm:text-[5.8rem] lg:text-[5.0rem]">
               Shashank <br /> Daga<span className="text-[#E8A33D]">.</span>
             </h1>
 

@@ -20,7 +20,7 @@ export default function Contact() {
               Let&apos;s <span className="text-[#E8A33D]">Build Together</span>
             </h2>
             <p className="max-w-xl text-base leading-8 text-slate-300">
-              I&apos;m open to full-time opportunities, internships, and freelance projects. Whether you're hiring, looking for someone to build your next project, or simply want to discuss an idea — my inbox is open.
+              I&apos;m open to full-time opportunities, internships, and freelance projects. Whether you&apos;re hiring, looking for someone to build your next project, or simply want to discuss an idea — my inbox is open.
             </p>
 
           </div>
@@ -32,9 +32,9 @@ export default function Contact() {
               id="contact-email"
               className="group flex items-center justify-between rounded-[24px] border border-white/10 bg-white/5 p-6 transition hover:border-[#E8A33D] hover:bg-[#E8A33D]/10"
             >
-              <div>
+              <div className="min-w-0">
                 <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Email</div>
-                <div className="mt-3 text-base font-semibold text-[#F8FAFC]">shashankdaga2510@gmail.com</div>
+                <div className="mt-3 break-all text-base font-semibold text-[#F8FAFC]">shashankdaga2510@gmail.com</div>
               </div>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-5 w-5 text-[#E8A33D]" aria-hidden="true">
                 <path d="M5 12h14m-4-4l4 4-4 4" />
