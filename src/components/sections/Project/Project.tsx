@@ -24,8 +24,9 @@ export default function Project() {
             <h2 className="text-4xl font-extrabold tracking-[-0.03em] text-[#F8FAFC] sm:text-5xl">
               From problems to <span className="text-[#E8A33D]">production</span>
             </h2>
-            <p className="mt-5 text-base leading-8 text-slate-300">
-              A selection of systems I&apos;ve designed and built to solve real-world problems.
+            <p className="mt-5 text-lg leading-8 text-slate-300">
+              {/* A selection of systems I&apos;ve designed and built to solve real-world problems. */}
+              Engineering scalable software, transforming ideas into reliable products.
             </p>
           </div>
 

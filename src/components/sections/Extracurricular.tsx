@@ -63,7 +63,7 @@ export default function Extracurricular() {
             <span className="text-[#E8A33D]">recognition</span>
           </h2>
 
-          <p className="mt-5 max-w-2xl text-base leading-7 text-slate-400">
+          <p className="mt-5 max-w-2xl text-lg leading-7 text-slate-400">
             Experiences that shaped my ability to lead, mentor, collaborate,
             and take responsibility beyond academics.
           </p>
@@ -163,7 +163,7 @@ export default function Extracurricular() {
                   </span>
                 </div>
 
-                <h4 className="mt-6 text-xl font-semibold text-[#F8FAFC]">
+                <h4 className="mt-6 text-2xl font-semibold text-[#F8FAFC]">
                   {award.title}
                 </h4>
 

@@ -52,7 +52,7 @@ export default function About() {
             <div className="mt-1 text-sm text-slate-400">Coursera · Kaggle · Forage</div>
           </div> */}
 
-          <div className="rounded-[24px] border border-white/10 bg-white/5 p-6 sm:col-span-2 sm:row-start-2">
+          <div className="rounded-[24px] border border-white/10 bg-white/5 p-4 sm:col-span-2 sm:row-start-2">
             <div className="text-sm font-semibold uppercase tracking-[0.25em] text-[#E8A33D]">B.Tech</div>
             <div className="mt-3 text-base font-semibold text-[#F8FAFC]">Vishwakarma Institute of Technology</div>
             <div className="mt-2 text-sm text-slate-400">Nov 2022 – June 2026</div>

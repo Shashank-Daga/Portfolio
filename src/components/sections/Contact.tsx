@@ -20,12 +20,12 @@ export default function Contact() {
               Let&apos;s <span className="text-[#E8A33D]">Build Together</span>
             </h2>
             <p className="max-w-xl text-base leading-8 text-slate-300">
-              I&apos;m open to full-time opportunities, internships, and freelance projects in software engineering. Whether you're hiring, looking for someone to build your next project, or simply want to discuss an idea — my inbox is open.
+              I&apos;m open to full-time opportunities, internships, and freelance projects. Whether you're hiring, looking for someone to build your next project, or simply want to discuss an idea — my inbox is open.
             </p>
 
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-6 sm:grid-cols-2">
             
             <a
               href="mailto:shashankdaga2510@gmail.com"

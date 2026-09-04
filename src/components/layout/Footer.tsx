@@ -14,15 +14,11 @@ export default function Footer() {
               <div className="flex h-[30px] w-[30px] items-center justify-center rounded-md bg-[#E8A33D] text-[11px] font-extrabold tracking-[0.04em] text-[#0B0E12]">
                 SD
               </div>
-
-              <span className="text-[15px] font-bold text-[#EDF1F7]">
-                Shashank Daga
-              </span>
             </div>
 
-            <p className="max-w-[360px] text-[14px] italic leading-[1.5] text-[#4E5A6B]">
+            {/* <p className="max-w-[360px] text-[14px] italic leading-[1.5] text-[#4E5A6B]">
               "Engineering scalable software, transforming ideas into reliable products."
-            </p>
+            </p> */}
           </div>
 
           {/* Right */}
@@ -55,8 +51,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="flex items-center justify-between py-5 text-[14px] text-[#4E5A6B]">
           <p>
-            © {new Date().getFullYear()} Shashank Daga. Designed & built from
-            scratch.
+            © {new Date().getFullYear()} Designed & built by Shashank Daga.
           </p>
 
           <Link

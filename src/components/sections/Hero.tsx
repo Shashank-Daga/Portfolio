@@ -25,19 +25,19 @@ export default function Hero() {
             <div className="mt-6 h-8 overflow-hidden">
 
               <div className="flex flex-col animate-role-slider">
-                <span className="h-8 leading-8 text-base font-medium text-[#E8A33D]">
+                <span className="h-8 leading-8 text-xl font-bold text-[#E8A33D]">
                   Backend Developer
                 </span>
 
-                <span className="h-8 leading-8 text-base font-medium text-[#E8A33D]">
+                <span className="h-8 leading-8 text-xl font-bold text-[#E8A33D]">
                   Data Engineer
                 </span>
 
-                <span className="h-8 leading-8 text-base font-medium text-[#E8A33D]">
+                <span className="h-8 leading-8 text-xl font-bold text-[#E8A33D]">
                   Full Stack Developer
                 </span>
 
-                <span className="h-8 leading-8 text-base font-medium text-[#E8A33D]">
+                <span className="h-8 leading-8 text-xl font-bold text-[#E8A33D]">
                   AI/ML Enthusiast
                 </span>
 
@@ -46,7 +46,7 @@ export default function Hero() {
                 </span> */}
 
                 {/* Duplicate first item for smooth looping */}
-                <span className="h-8 leading-8 text-base font-medium text-[#E8A33D]">
+                <span className="h-8 leading-8 text-xl font-bold text-[#E8A33D]">
                   Backend Developer
                 </span>
               </div>

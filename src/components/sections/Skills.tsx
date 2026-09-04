@@ -37,7 +37,7 @@ export default function Skills() {
                 <div className="w-40 text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">
                   {row.label}
                 </div>
-                <div className="flex-1 text-sm text-slate-200">
+                <div className="flex-1 text-sm font-medium text-slate-200">
                   <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
                     {row.items.map((it) => (
                       <span key={it} className="mr-3 inline-block">
